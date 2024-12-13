@@ -31,8 +31,8 @@ const TableComponent = ({ data, total, onToggle, onEdit, onDelete }) => {
             <td>{item.discountCode}</td>
             <td>{item.impressions}</td>
             <td>{item.conversions}</td>
-            <td>$ {item.revenue?.toFixed(2)}</td>
-            <td>{item.conversionRate?.toFixed(2)} %</td>
+            <td>$ {Number(item.revenue)?.toFixed(2)}</td>
+            <td>{Number(item.conversionRate)?.toFixed(2)} %</td>
             <td>
               <button 
                 className="edit-button"
@@ -54,8 +54,8 @@ const TableComponent = ({ data, total, onToggle, onEdit, onDelete }) => {
           <td>Total</td>
           <td>{total.impressions}</td>
           <td>{total.conversions}</td>
-          <td>${total.revenue.toFixed(2)}</td>
-          <td>{total.conversionRate}%</td>
+          <td>${Number(total.revenue).toFixed(2)}</td>
+          <td>{Number(total.conversionRate)}%</td>
           <td></td>
         </tr>
       </tbody>

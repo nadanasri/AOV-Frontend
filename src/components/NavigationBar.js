@@ -2,14 +2,12 @@ import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import logoipsum from "../logoipsum.svg";
 
-
 const NavigationBar = () => {
   const location = useLocation();
 
   return (
     <nav className="navbar">
-      {/* Left side navigation items */}
-      <div className="nav-left">
+        <div className="nav-left">
         <NavLink
           to="/dashboard"
           className={`nav-item ${location.pathname === '/dashboard' ? 'selected' : ''}`}
@@ -24,7 +22,6 @@ const NavigationBar = () => {
         </NavLink>
       </div>
 
-      {/* Right side navigation items */}
       <div className="nav-right">
         <NavLink
           to="/demo"
